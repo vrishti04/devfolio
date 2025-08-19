@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Italiana&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Rubik+Doodle+Shadow&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
 body{
 margin: 0;
 overflow-x: hidden;
-/* height: 200vh; */
-width: 100%;
+width: 100vw;
 user-select: none;
 background-color: #330033;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
@@ -22,6 +22,7 @@ html{
     position: fixed;
     width: 100%;  
     z-index: 10;
+    
 }
 
 .navbar>ul{
@@ -48,10 +49,43 @@ html{
 color: #dd60dd;
 }
 
+#home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: max-content;
 
+}
+.name{
+    font-size: 8em;
+    color:#e9b9e9;
+}
+.hi{
+font-family: 'Rubik Doodle Shadow';
+}
 
+.vri{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
 
-.name
+.vri:hover{
+    color:rgb(228, 114, 188) ;
+}
+
+.pic{
+    height: 400px;
+    width: 400px;
+    background-image: url("./assets/mypic1.jpg");
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* .name
 {
     width: fit-content;
     height: 300px;
@@ -61,11 +95,11 @@ color: #dd60dd;
     left: 80px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     user-select: none;
-}
+} */
 
-.hi{
+/* .hi{
     font-family: 'Rubik Doodle Shadow';
-    animation:normal;
+   
 }
 
 .vri:hover{
@@ -74,20 +108,26 @@ color: #dd60dd;
 
 .vri{
     text-shadow: 2px 2px 2px  white;
-}
+} */
 
-#home,#about,#skills,#projects,#contact{
+
+
+
+
+
+
+#about,#skills,#projects,#contact{
     
-    width: 100%;
+    width: 100vw;
 }
 
-#home{
+/* #home{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     
-}
+} */
 
 
 #about{
@@ -113,7 +153,7 @@ justify-content: center;
 }
 
 
-.pic_container{
+/* .pic_container{
 
 width: 40%;
 display: flex;
@@ -129,7 +169,6 @@ justify-content: center;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    /* right: 150px; */
     top:20px;
     
     
@@ -141,7 +180,7 @@ justify-content: center;
     top: 20px;
     left: 60px;
     
-}
+} */
 
 
 
@@ -268,9 +307,6 @@ border: 1px solid white
     align-items: flex-start;
     overflow: hidden;
   
-    
-    
-    
  }
 
 
@@ -387,6 +423,38 @@ text-decoration: none;
     width: 1em ;
 }
  
+#namemobile{
+    display: none;
+}
+@media(max-width:1100px){
+
+    #home{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 40px;
+        
+        
+    }
+    .name{
+        font-size: 5em;
+    }
+    .pic{
+        height: 350px;
+        width: 350px;
+    }
+    #namemobile{
+        display: flex;
+        flex-direction: column;
+
+    }
+    #namedesktop{
+        display: none;
+    }
+
+}
+
+
  
  
 
